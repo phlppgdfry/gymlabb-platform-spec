@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>GymLabb · Philippe Godfroy</title>
+    <meta
+      name="description"
+      content="A working coaching workspace for training-session logging, weekly check-ins and coach review, built from the original product specification."
+    />
+    <meta name="theme-color" content="#6351bc" />
+    <link
+      rel="canonical"
+      href="https://phlppgdfry.github.io/gymlabb-platform-spec/"
+    />
+    <meta property="og:title" content="GymLabb · Engineering portfolio" />
+    <meta
+      property="og:description"
+      content="A working coaching workspace for training-session logging, weekly check-ins and coach review, built from the original product specification."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://phlppgdfry.github.io/gymlabb-platform-spec/"
+    />
+    <meta
+      property="og:image"
+      content="https://phlppgdfry.github.io/gymlabb-platform-spec/docs/preview.png"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="stylesheet" href="showcase.css" />
+  </head>
+  <body>
+    <a class="skip" href="#project">Skip to project</a>
+    <header>
+      <a
+        href="https://phlppgdfry.github.io/gymlabb-platform-spec/"
+        class="brand"
+        ><img src="logo.svg" width="34" height="34" alt="" /><span
+          >GymLabb</span
+        ></a
+      >
+      <nav aria-label="Project navigation">
+        <a href="#walkthrough">Workflow</a><a href="#engineering">Engineering</a
+        ><a href="https://github.com/phlppgdfry/gymlabb-platform-spec"
+          >Source code</a
+        >
+      </nav>
+    </header>
+    <main id="project">
+      <section class="hero">
+        <div>
+          <h1>Good coaching starts with attention.</h1>
+          <p class="lead">
+            A working coaching workspace for training-session logging, weekly
+            check-ins and coach review, built from the original product
+            specification.
+          </p>
+          <div class="actions">
+            <a class="button" href="#run">Run the demo</a
+            ><a
+              class="button outline"
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec"
+              >Explore the repository</a
+            >
+          </div>
+        </div>
+        <div class="scope">
+          <strong>Local application. Public case study.</strong>This page
+          presents the working product and its engineering. Run the interactive
+          application locally. All displayed records and metrics are synthetic.
+        </div>
+      </section>
+      <figure class="preview">
+        <a href="docs/preview.png" aria-label="View full desktop screenshot"
+          ><img
+            src="docs/preview.png"
+            width="1440"
+            height="1100"
+            alt="GymLabb desktop workspace with metrics, comparison panel and actionable record inspector"
+            fetchpriority="high"
+        /></a>
+        <figcaption>
+          Actual application screenshot · Training week · 15–21 June 2026 ·
+          <a href="docs/mobile.png">View the mobile layout</a>
+        </figcaption>
+      </figure>
+      <section class="metrics" aria-label="Reproducible synthetic baseline">
+        <div class="metric">
+          <span>Active clients</span><strong>6</strong
+          ><small>Synthetic coaching roster</small>
+        </div>
+        <div class="metric">
+          <span>Sessions logged</span><strong>0</strong
+          ><small>Of 18 planned this week</small>
+        </div>
+        <div class="metric">
+          <span>Training adherence</span><strong>0%</strong
+          ><small>Completed sessions ÷ planned sessions</small>
+        </div>
+        <div class="metric">
+          <span>Need attention</span><strong>2</strong
+          ><small>No training activity for 7+ days</small>
+        </div>
+      </section>
+      <section class="content" id="walkthrough">
+        <div>
+          <h2>Follow the complete workflow.</h2>
+          <p>
+            Every action reaches a stored result. Validation errors explain the
+            rule that needs attention.
+          </p>
+          <ol>
+            <li>
+              Select Emma Vermeer and save a squat session with 3 sets × 8 reps
+              × 40 kg. Weekly logged volume becomes 960 kg.
+            </li>
+            <li>
+              Submit a fictional weekly check-in with sleep, energy and a note.
+              Mark the check-in reviewed as the coach.
+            </li>
+            <li>
+              Reload and select Emma again to verify the session and review
+              state persist. Submit another check-in to reopen review.
+            </li>
+          </ol>
+        </div>
+        <div id="run">
+          <h2>From clone to working demo.</h2>
+          <p>
+            Python 3.11+ is enough to run the application. No API key, account
+            or paid service is required.
+          </p>
+          <pre><code>git clone https://github.com/phlppgdfry/gymlabb-platform-spec.git
+cd gymlabb-platform-spec
+python3 -m demo.server</code></pre>
+          <p>
+            Then open <code>http://127.0.0.1:8113</code>. Your changes stay in a
+            local SQLite database. See the README for fresh workspaces, exports
+            and test instructions.
+          </p>
+          <div class="resources">
+            <a href="https://github.com/phlppgdfry/gymlabb-platform-spec#readme"
+              >Setup guide</a
+            ><a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/blob/main/docs/case-study.md"
+              >Full case study</a
+            >
+          </div>
+        </div>
+      </section>
+      <section class="content" id="engineering">
+        <div>
+          <h2>Clear rules. Verifiable behaviour.</h2>
+          <h3>Domain logic owns the outcome.</h3>
+          <p>
+            Server-side validation, explicit use cases and derived metrics keep
+            browser inputs from becoming authoritative business state.
+          </p>
+          <h3>Changes commit together.</h3>
+          <p>
+            A record update and its audit entry share one transaction. Version
+            checks reject stale edits, and concurrent requests are tested
+            against real SQLite connections.
+          </p>
+          <div class="resources">
+            <a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/blob/main/docs/architecture.md"
+              >Architecture</a
+            ><a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/blob/main/docs/api.md"
+              >API contract</a
+            ><a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/tree/main/reports/baseline"
+              >Reproduce the evidence</a
+            >
+          </div>
+        </div>
+        <div class="evidence">
+          <h2>Evidence you can inspect.</h2>
+          <p>
+            Automated tests cover business boundaries, persistence, HTTP
+            responses, failed writes and simultaneous updates. Seven Chromium
+            checks cover the core task, branded assets, filtering and three
+            screen widths.
+          </p>
+          <p>
+            The repository records implementation limits and separates the
+            original concept from delivered functionality. Synthetic results are
+            never presented as customer outcomes.
+          </p>
+          <div class="resources">
+            <a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/actions/workflows/demo.yml"
+              >View CI results</a
+            ><a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/blob/main/docs/validation.md"
+              >Validation notes</a
+            ><a
+              href="https://github.com/phlppgdfry/gymlabb-platform-spec/blob/main/docs/runbook.md"
+              >Runbook</a
+            >
+          </div>
+        </div>
+      </section>
+      <footer>
+        <span>GymLabb · Portfolio demonstration</span
+        ><span
+          >Designed and built by
+          <a href="https://github.com/phlppgdfry">Philippe Godfroy</a></span
+        >
+      </footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "GymLabb",
+  "short_name": "GymLabb",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "theme_color": "#6351bc",
+  "background_color": "#f4f5f9",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
