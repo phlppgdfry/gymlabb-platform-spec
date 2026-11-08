@@ -1,0 +1,157 @@
+{
+  "project": "GymLabb",
+  "mode": "synthetic baseline",
+  "clock": "Training week · 15–21 June 2026",
+  "metrics": [
+    {
+      "label": "Active clients",
+      "value": 6,
+      "note": "Synthetic coaching roster"
+    },
+    {
+      "label": "Sessions logged",
+      "value": 0,
+      "note": "Of 18 planned this week"
+    },
+    {
+      "label": "Training adherence",
+      "value": "0%",
+      "note": "Completed sessions ÷ planned sessions"
+    },
+    {
+      "label": "Need attention",
+      "value": 2,
+      "note": "No training activity for 7+ days"
+    }
+  ],
+  "analysis": {
+    "title": "Make room for the human part.",
+    "headline": "Less chasing. More coaching.",
+    "description": "Log a squat session with actual sets, reps and load. Submit a weekly check-in, then mark it reviewed. This demo does not provide medical or exercise recommendations.",
+    "bars_title": "Weekly session adherence · %",
+    "bars": [
+      {
+        "label": "Emma Vermeer",
+        "value": 0.0,
+        "display": "0/3"
+      },
+      {
+        "label": "Lucas De Smet",
+        "value": 0.0,
+        "display": "0/3"
+      },
+      {
+        "label": "Noor Janssens",
+        "value": 0.0,
+        "display": "0/3"
+      },
+      {
+        "label": "Milan Peeters",
+        "value": 0.0,
+        "display": "0/3"
+      },
+      {
+        "label": "Lena Dubois",
+        "value": 0.0,
+        "display": "0/3"
+      },
+      {
+        "label": "Adam Willems",
+        "value": 0.0,
+        "display": "0/3"
+      }
+    ]
+  },
+  "records": [
+    {
+      "id": "1",
+      "name": "Emma Vermeer",
+      "program": "Strength foundations",
+      "inactive": 8,
+      "planned": 3,
+      "workouts": [],
+      "checkin": null,
+      "reviewed": false,
+      "version": 1,
+      "status": "Needs attention",
+      "value": "0 / 3",
+      "context": "Strength foundations",
+      "volume": 0
+    },
+    {
+      "id": "5",
+      "name": "Lena Dubois",
+      "program": "Progressive strength",
+      "inactive": 9,
+      "planned": 3,
+      "workouts": [],
+      "checkin": null,
+      "reviewed": false,
+      "version": 1,
+      "status": "Needs attention",
+      "value": "0 / 3",
+      "context": "Progressive strength",
+      "volume": 0
+    },
+    {
+      "id": "6",
+      "name": "Adam Willems",
+      "program": "Return to training",
+      "inactive": 2,
+      "planned": 3,
+      "workouts": [],
+      "checkin": null,
+      "reviewed": false,
+      "version": 1,
+      "status": "On track",
+      "value": "0 / 3",
+      "context": "Return to training",
+      "volume": 0
+    },
+    {
+      "id": "2",
+      "name": "Lucas De Smet",
+      "program": "Progressive strength",
+      "inactive": 3,
+      "planned": 3,
+      "workouts": [],
+      "checkin": null,
+      "reviewed": false,
+      "version": 1,
+      "status": "On track",
+      "value": "0 / 3",
+      "context": "Progressive strength",
+      "volume": 0
+    },
+    {
+      "id": "4",
+      "name": "Milan Peeters",
+      "program": "Strength foundations",
+      "inactive": 1,
+      "planned": 3,
+      "workouts": [],
+      "checkin": null,
+      "reviewed": false,
+      "version": 1,
+      "status": "On track",
+      "value": "0 / 3",
+      "context": "Strength foundations",
+      "volume": 0
+    },
+    {
+      "id": "3",
+      "name": "Noor Janssens",
+      "program": "Return to training",
+      "inactive": 6,
+      "planned": 3,
+      "workouts": [],
+      "checkin": null,
+      "reviewed": false,
+      "version": 1,
+      "status": "On track",
+      "value": "0 / 3",
+      "context": "Return to training",
+      "volume": 0
+    }
+  ]
+}
